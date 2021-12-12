@@ -1,0 +1,35 @@
+$fontsize: 16px // Body Font Size
+$textcolor: #333
+$mainfont: nunito, sans-serif
+$descrfont: quicksand, sans-serif
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('nunito', normal, 600, '../fonts/Nunito-SemiBold.woff2')
+@include font('nunito', normal, 700, '../fonts/Nunito-Bold.woff2')
+@include font('nunito', normal, 800, '../fonts/Nunito-ExtraBold.woff2')
+@include font('quicksand', normal, 400, '../fonts/Quicksand-Regular.woff2')
+@include font('quicksand', normal, 700, '../fonts/Quicksand-Bold.woff2')
+
+::placeholder
+	color: #666
+
+body
+	font-family: $mainfont
+	font-size: $fontsize
+	color: $textcolor
+	position: relative
+	overflow-x: hidden
+	background-color: #FFF8F5
