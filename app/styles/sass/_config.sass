@@ -5,6 +5,7 @@ $colorhead: #242851
 $colordescr: #707283
 $colorwhite: #fff
 $colorsubhead: #FF7751
+$colorcontainer: #FFECE4
 // IMPORT SECTION
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
@@ -25,15 +26,11 @@ $colorsubhead: #FF7751
 @include font('quicksand', normal, 400, '../fonts/Quicksand-Regular.woff2')
 @include font('quicksand', normal, 700, '../fonts/Quicksand-Bold.woff2')
 
-*
-	margin: 0
-	padding: 0
-	box-sizing: border-box
-
 ::placeholder
 	color: #666
 
 body
+	box-sizing: border-box
 	font-family: $mainfont
 	font-size: 16px
 	color: $textcolor
@@ -51,6 +48,9 @@ a
 	display: inline-block
 	text-decoration: none
 	cursor: pointer
+
+p
+	margin: 0
 
 .container
 	max-width: 1490px
