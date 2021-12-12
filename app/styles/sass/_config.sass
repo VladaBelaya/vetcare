@@ -1,8 +1,10 @@
-$fontsize: 16px // Body Font Size
 $textcolor: #333
 $mainfont: nunito, sans-serif
 $descrfont: quicksand, sans-serif
-
+$colorhead: #242851
+$colordescr: #707283
+$colorwhite: #fff
+$colorsubhead: #FF7751
 // IMPORT SECTION
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
@@ -23,13 +25,34 @@ $descrfont: quicksand, sans-serif
 @include font('quicksand', normal, 400, '../fonts/Quicksand-Regular.woff2')
 @include font('quicksand', normal, 700, '../fonts/Quicksand-Bold.woff2')
 
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
 ::placeholder
 	color: #666
 
 body
 	font-family: $mainfont
-	font-size: $fontsize
+	font-size: 16px
 	color: $textcolor
 	position: relative
 	overflow-x: hidden
 	background-color: #FFF8F5
+
+ul
+	margin: 0
+	padding: 0
+li
+	list-style-type: none
+
+a
+	display: inline-block
+	text-decoration: none
+	cursor: pointer
+
+.container
+	max-width: 1490px
+	padding: 0 15px
+	margin: 0 auto
