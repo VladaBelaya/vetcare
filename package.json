@@ -28,7 +28,6 @@
 		"gulp": "^4.0.2",
 		"gulp-changed": "^4.0.3",
 		"gulp-concat": "^2.6.1",
-		"gulp-imagemin": "^8.0.0",
 		"gulp-less": "^5.0.0",
 		"gulp-less-glob": "^1.0.0",
 		"gulp-noop": "^1.0.1",
@@ -42,5 +41,9 @@
 		"terser-webpack-plugin": "^5.2.4",
 		"webpack": "^5.59.1",
 		"webpack-stream": "^7.0.0"
+	},
+	"dependencies": {
+		"gulp-imagemin": "^8.0.0",
+		"imagemin": "^8.0.1"
 	}
 }
