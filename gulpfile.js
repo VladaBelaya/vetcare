@@ -21,7 +21,7 @@ import stylglob      from 'gulp-noop'
 import postCss       from 'gulp-postcss'
 import cssnano       from 'cssnano'
 import autoprefixer  from 'autoprefixer'
-// import imagemin      from 'gulp-imagemin'
+import imagemin      from 'gulp-imagemin'
 import changed       from 'gulp-changed'
 import concat        from 'gulp-concat'
 import rsync         from 'gulp-rsync'
@@ -96,7 +96,7 @@ function styles() {
 function images() {
 	return src(['app/images/src/**/*'])
 		.pipe(changed('app/images/dist'))
-		// .pipe(imagemin())
+		.pipe(imagemin())
 		.pipe(dest('app/images/dist'))
 		.pipe(browserSync.stream())
 }
