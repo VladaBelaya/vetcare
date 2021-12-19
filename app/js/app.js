@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const anchorsLinks = document.querySelectorAll('a[href^="#"]')
 	const cardsList = document.querySelector('.cards')
-	
+	const btnUp = document.querySelector('.btn_up')
+	let scrolled
+	let timer
 	initTemplate ()
 	function initTemplate () {
 		cardItem.forEach((card, idx) => cardsList.innerHTML += createTemplate(card, idx))
@@ -35,6 +37,29 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 1300) {
+			btnUp.classList.add('btn_up-active')
+		} else
+		btnUp.classList.remove('btn_up-active')
+	})
+
+	btnUp.addEventListener('click', () => {
+		scrolled = window.pageYOffset
+		scrollToUp()
+	})
+
+
+	function scrollToUp () {
+		if(scrolled > 0) {
+			window.scrollTo(0, scrolled)
+			scrolled = scrolled - 100
+			timer = setTimeout(scrollToUp, 20)
+		} else {
+			clearTimeout()
+			window.scrollTo(0, 0)
+		}
+	}
 
 })
 
