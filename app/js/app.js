@@ -1,7 +1,18 @@
 import {cardItem} from '../data/cardItem.js'
 
-document.addEventListener('DOMContentLoaded', () => {
+const preloader = document.querySelector('.preloader');
 
+window.addEventListener('load', () => {
+	document.body.style.overflow = 'hidden'
+	setTimeout(function() {
+				preloader.classList.add('preloader-hidden');
+				document.body.style.overflow = 'visible'
+	}, 2200);
+})
+
+
+document.addEventListener('DOMContentLoaded', () => {
+	
   const anchorsLinks = document.querySelectorAll('a[href^="#"]')
 	const cardsList = document.querySelector('.cards')
 	const btnUp = document.querySelector('.btn_up')
