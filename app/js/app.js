@@ -1,6 +1,6 @@
 import {cardItem} from '../data/cardItem.js'
 
-const preloader = document.querySelector('.preloader');
+const preloader = document.querySelector('.loader');
 
 window.addEventListener('load', () => {
 	document.body.style.overflow = 'hidden'
