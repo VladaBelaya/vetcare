@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
 	setTimeout(function() {
 				preloader.classList.add('preloader-hidden');
 				document.body.style.overflow = 'visible'
-	}, 2200);
+	}, 1500);
 })
 
 
